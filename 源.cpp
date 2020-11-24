@@ -8,6 +8,8 @@ static int OLNUMBER = 12;
 static int NENUMBER = 7;
 
 int main() {
+	cout << "7参数转换：\n请输入旧坐标总个数：\n"; cin >> OLNUMBER;
+	cout << "请输入新坐标的个数：\n"; cin >> NENUMBER;
 	point* ol = new point[OLNUMBER];
 	point* ne = new point[NENUMBER];
 	point* temp = ol,*temp1=ne;
@@ -63,7 +65,7 @@ int main() {
 	MatrixXd xigama;
 	xigama = v.transpose() * v;
 	double xigamad = xigama(0, 0);
-	xigamad = sqrt(xigamad / (NENUMBER * 3 - 7));
+	xigamad = sqrt(xigamad / (NENUMBER * 3.0 - 7));
 	cout << "x\n" << x << endl << "v\n" << v<<endl <<"xigama:\n"<<xigamad<< endl;
 	temp = ol;
 	for (int i = 0; i < 3 * OLNUMBER; i++) {
